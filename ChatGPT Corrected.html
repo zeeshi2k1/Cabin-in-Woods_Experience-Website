@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabin In Woods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="try w-full bg-zinc-900">
+        <div class="parent relative top-0 left-0 w-full h-[700vh] bg-zinc-800">
+            <div class="w-full sticky top-0 left-0 h-52">
+                <canvas class="w-full h-screen" id="frame"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+
+        const canvas = document.querySelector("canvas");
+        const context = canvas.getContext("2d");
+
+        const frame = {
+            CurrentFrame: 0,
+            MaxFrame: 459
+        };
+
+        let loadedImgs = 0;
+        const Images = [];
+
+        function preLoadImages(){
+            for (var i = 0; i <= frame.MaxFrame; i++) {
+                const ImgURL = `./Images Sequence/rendered video${i.toString().padStart(3,"0")}.jpg`;
+                const Img = new Image();
+                Img.src = ImgURL;
+                Img.onload = () => {
+                    loadedImgs++;
+                    if(loadedImgs == frame.MaxFrame){
+                        loadImages(frame.CurrentFrame);
+                        startAnimation();
+                    }
+                };
+                Images.push(Img);
+            } 
+        }
+
+        function loadImages(index){
+            if(index >= 0 && index <= frame.MaxFrame){
+                const Img = Images[index];
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                const ScaleX = canvas.width / Img.width;
+                const ScaleY = canvas.height / Img.height;
+                const Scale = Math.max(ScaleX, ScaleY);
+                const newWidth = Img.width * Scale;
+                const newHeight = Img.height * Scale;
+                const offSetX = (canvas.width - newWidth) / 2;
+                const offSetY = (canvas.height - newHeight) / 2;
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.imageSmoothingEnabled = true;
+                context.imageSmoothingQuality = "high";
+                context.drawImage(Img, offSetX, offSetY, newWidth, newHeight);
+                frame.CurrentFrame = index;
+            }
+        }
+
+        function startAnimation(){
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.to(frame, {
+                CurrentFrame: frame.MaxFrame,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".parent",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true
+                },
+                onUpdate: function () {
+                    loadImages(Math.floor(frame.CurrentFrame));
+                }
+            });
+        }
+
+        preLoadImages();
+        
+    </script>
+</body>
+</html>
