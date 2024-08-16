@@ -55,9 +55,11 @@
                         <button class="bg-black text-white text-sm px-3 py-2 mt-4 font-[100] capitalize">
                             experience
                         </button>
-
                     </div>
-
+                </div>
+                <div class="absolute zshan z-[2] top-1/2 left-1/2 text-center text-white text-6xl 
+                -translate-x-1/2 -translate-y-1/2 tracking-tighter opacity-0">
+                 @z <span class="line w-0 h-1 bg-white inline-block opacity-0"></span> shan.blend
                 </div>
             </div>
         </div>
@@ -166,6 +168,20 @@
 
            .to(frame, UpdateFrame(320), "tenthFlag")
            .to(".panel", {opacity: 0, ease: "linear"}, "tenthFlag")
+
+           .to(frame, UpdateFrame(350), "eleventhFlag")
+           .to(".zshan", {opacity: 1, ease: "expo"}, "eleventhFlag")
+
+           .to(frame, UpdateFrame(380), "twelvethFlag")
+           .to(".zshan span", {opacity: 1, ease: "expo", width: 40}, "twelvethFlag")
+
+           .to(frame, UpdateFrame(410), "thirteenthFlag")
+           .to(".zshan span", {opacity: 1, ease: "expo", width: 40}, "thirteenthFlag")
+
+           .to(frame, UpdateFrame(440), "fourteenthFlag")
+           .to(".zshan", {opacity: 0, ease: "linear"}, "fourteenthFlag")
+
+           .to(frame, UpdateFrame(frame.MaxFrame), "endFlag")
 
             window.addEventListener("resize", function(){
                 loadImages(frame.CurrentFrame)
