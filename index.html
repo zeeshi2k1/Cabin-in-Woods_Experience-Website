@@ -3,102 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabin In Woods</title>
+    <title>Cabin in Woods</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
+    <div class="w-full bg-zinc-900">
+        <div class="parent relative w-full h-[1400vh]">
+            <div class="w-full sticky top-0 left-0 overflow-x-hidden">
+                <canvas class="w-full h-screen" id="canvas"></canvas>
+                <div class="absolute animate1 z-[2] text-white bottom-10 w-1/2 left-10">
+                    <h1 class="leading-20 font-[100] text-3xl">
+                        &copy; Cabin in Woods
+                    </h1>
+                    <h1 class="text-3xl">Secrets Remain Untold</h1>
+                </div>
+                <div class="absolute animate2 flex z-[2] text-white bottom-10 w-1/2 right-10 text-right opacity-0">
+                    <h1 class="leading-20 font-[100] uppercase text-6xl">
+                        Mysteries Await
+                    </h1>
+                    <h1 class="text-xl w-1/2">Beyond the Trees</h1>
+                </div>
+                <div class="absolute animate3 z-[2] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center opacity-0">
+                    <h1 class="leading-20 font-[100] uppercase text-6xl">
+                        Elevating Fears
+                    </h1>
+                    <h1 class="text-xl">
+                        Step into the Unknown, Where Every Shadow Holds a Secret. Feel Your Heartbeat Rise as Darkness Unfolds Its Tales.
+                    </h1>
+                </div>
+                <div class="absolute w-1/3 panel translate-x-full h-screen bg-white right-0 top-0 z-[2] p-10">
+                    <h3 class="panelelem text-xl font-[100]">&copy; Cabin in Woods</h3>
+                    <p class="panelelem mt-10 font-[400]">
+                        As you approach the cabin, the air thickens with a sense of unease. Every step you take draws you deeper into the unknown, 
+                        where the boundary between reality and the supernatural begins to blur. 
+                        "Elevating Fear" captures the essence of suspense that builds with every creak of the floorboards, 
+                        every rustle of the wind through the trees. It's the feeling of something just out of sight, 
+                        lurking in the shadows, waiting to reveal itself. This fear is not just a fleeting sensation. It grows layer by layer.
+                        Pulling you into a world where the ordinary becomes extraordinary and the familiar turns into something terrifying. 
+                        Here, fear is not merely an emotion. it's an experience that heightens with every moment, elevating your senses to the edge of thrill and terror.
+                    </p>
+                    <button class="panelelem border-[1px] px-3 py-2 border[#555] font-[100] mt-6">
+                        Get Reviews
+                    </button>
 
-    <div class="try w-full bg-zinc-900">
-        <div class="parent relative top-0 left-0 w-full h-[700vh] bg-zinc-800">
-            <div class="w-full sticky top-0 left-0 h-52">
-                <canvas class="w-full h-screen" id="frame"></canvas>
+                    <div class="panelelem absolute bottom-10">
+                        <h3 class="text-xl font-[100]">Unfold the Untold</h3>
+                        <p class="text-sm mt-3 font-[400]">
+                            As the Forest Stirs, Your Senses Awaken to the Unknown. 
+                            Let the Chilling Embrace of Darkness Lead You to Its Secrets.
+                        </p>
+                        <button class="bg-black text-white text-sm px-3 py-2 mt-4 font-[100] capitalize">
+                            experience
+                        </button>
+                    </div>
+                </div>
+                <div class="absolute zshan z-[2] top-1/2 left-1/2 text-center text-white text-6xl 
+                -translate-x-1/2 -translate-y-1/2 tracking-tighter opacity-0">
+                 @z <span class="line w-0 h-1 bg-white inline-block opacity-0"></span> shan3d.blend
+                </div>
+                <div class="w-full p-10 bg-black text-white text-6xl">
+
+                    &capcup; &nbsp; Connect with Us:
+
+                    <br><br>
+
+                    <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl"> <label class="ml-10">z_shan3d.blend</label></a><br>
+                    <a href="https://www.instagram.com/skippingdays.exe/" class="fa fa-instagram text-5xl"> <label class="ml-10">skippingdays.exe</label></a><br>
+                    <a href="https://github.com/zeeshi2k1" class="fa fa-github text-5xl">  <label class="ml-10">zeeshi2k1</label></a><br>
+                    <a href="https://www.behance.net/Zeeshii2k1" class="fa fa-behance text-5xl">  <label class="ml-6">Zeeshii2k1</label></a><br>
+                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/" class="fa fa-linkedin text-5xl"> <label class="ml-9">Zeeshan Ahmed</label></a><br>
+                    <a href="https://www.facebook.com/profile.php?id=100008536835195" class="fa fa-facebook text-5xl">  <label class="ml-12">Zeeshan Ahmed</label></a><br>
+                    <a href="#" class="fa fa-twitter text-5xl"> <label class="ml-8">Zeeshan Ahmed</label></a>
+                    
+                    <br><br>
+
+                    &copy; &nbsp;Credits:
+
+                    <br><br>
+                    <p class="text-3xl">
+                    VFX & CGI: Zeeshan Ahmed<br>
+                    Web Developer: Zeeshan Ahmed<br>
+                    3D Artist: Zeeshan Ahmed<br>
+                    Rendered: Zeeshan Ahmed<br>
+                    Inspired Website: doze.studio<br>
+                    Inspired by: Sheryians
+                    </p>
+
+                    <br><br>
+
+                    Thank You!
+                    
+                </div>
             </div>
         </div>
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" 
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script>
+         const canvas = document.querySelector("canvas");
+         const context = canvas.getContext("2d");
 
-        const canvas = document.querySelector("canvas");
-        const context = canvas.getContext("2d");
-
-        const frame = {
+         const frame = {
             CurrentFrame: 0,
             MaxFrame: 459
-        }
+        };
 
-        let loadedImgs = 0;
-        const Images = [];
+        let loadedImgs = 0
+        const Images = []
+
 
         function preLoadImages(){
             for (var i = 0; i <= frame.MaxFrame; i++) {
                 const ImgURL = `./Images Sequence/rendered video${i.toString().padStart(3,"0")}.jpg`
-                const Img = new Image();
-                Img.src = ImgURL;
+                const Img = new Image()
+                Img.src = ImgURL
                 Img.onload = () => {
-                    loadedImgs++;
+                    loadedImgs++
                     if(loadedImgs == frame.MaxFrame){
-                        loadImages(frame.CurrentFrame);
-                        startAnimation();
+                        loadImages(frame.CurrentFrame)
+                        startAnimation()
                     }
-                }
-                Images.push(Img);
+                };
+                Images.push(Img)
             } 
         }
 
+        
         function loadImages(index){
             if(index >= 0 && index <= frame.MaxFrame){
-
-                const Img = Images[index];
-
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                
-                const ScaleX = canvas.width / Img.width;
-                const ScaleY = canvas.height / Img.height;
-
-                const Scale = Math.max(ScaleX, ScaleY);
-
-                const newWidth = Img.width * Scale;
-                const newHeight = Img.height * Scale;
-
-                const offSetX = (canvas.width - newWidth) / 2;
-                const offSetY = (canvas.height - newHeight) / 2;
-
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.imageSmoothingEnabled = "true";
-                context.imageSmoothingQuality ="high";
-                context.drawImage(Img, offSetX, offSetY, newWidth, newHeight);
-                frame.CurrentFrame = index;
+                const Img = Images[index]
+                canvas.width = window.innerWidth
+                canvas.height = window.innerHeight
+                const ScaleX = canvas.width / Img.width
+                const ScaleY = canvas.height / Img.height
+                const Scale = Math.max(ScaleX, ScaleY)
+                const newWidth = Img.width * Scale
+                const newHeight = Img.height * Scale
+                const offSetX = (canvas.width - newWidth) / 2
+                const offSetY = (canvas.height - newHeight) / 2
+                context.clearRect(0, 0, canvas.width, canvas.height)
+                context.imageSmoothingEnabled = true
+                context.imageSmoothingQuality = "high"
+                context.drawImage(Img, offSetX, offSetY, newWidth, newHeight)
+                frame.CurrentFrame = index
             }
         }
 
         function startAnimation(){
-            var TimeLine = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".parent",
-                    start: "top top",
-                    scrub : 2,
-                    end : "bottom bottom",
-                    markers : true
-                }
-            })
+           var TimeLine = gsap.timeline({
+            scrollTrigger : {
+                trigger : ".parent",
+                start: "top top",
+                scrub: 2,
+                end: "bottom bottom"  
+            }
+           })
 
-            TimeLine.to(frame, {
-                CurrentFrame: frame.MaxFrame,
-                onUpdate: function () {
+           function UpdateFrame(index) {
+            return {
+                CurrentFrame: index,
+                ease: "linear",
+                onUpdate: function() {
                     loadImages(Math.floor(frame.CurrentFrame))
                 }
+            }
+           }
+
+           TimeLine
+           .to(frame, UpdateFrame(50), "firstFlag")
+           .to(".animate1", {opacity: 0, ease: "linear"}, "firstFlag")
+
+           .to(frame, UpdateFrame(80), "secondFlag")
+           .to(".animate2", {opacity: 1, ease: "linear"}, "secondFlag")
+
+           .to(frame, UpdateFrame(110), "thirdFlag")
+           .to(".animate2", {opacity: 1, ease: "linear"}, "thirdFlag")
+
+           .to(frame, UpdateFrame(140), "fourthFlag")
+           .to(".animate2", {opacity: 0, ease: "linear"}, "fourthFlag")
+
+           .to(frame, UpdateFrame(170), "fifthFlag")
+           .to(".animate3", {opacity: 1, ease: "linear"}, "fifthFlag")
+
+           .to(frame, UpdateFrame(200), "sixthFlag")
+           .to(".animate3", {opacity: 1, ease: "linear"}, "sixthFlag")
+
+           .to(frame, UpdateFrame(230), "seventhFlag")
+           .to(".animate3", {opacity: 0, ease: "linear"}, "seventhFlag")
+
+           .to(frame, UpdateFrame(260), "eighthFlag")
+           .to(".panel", {x: "0%", ease: "expo"}, "eighthFlag")
+
+           .to(frame, UpdateFrame(290), "ninthFlag")
+           .to(".panel", {x: "0%", ease: "expo"}, "ninthFlag")
+
+           .to(frame, UpdateFrame(320), "tenthFlag")
+           .to(".panel", {opacity: 0, ease: "linear"}, "tenthFlag")
+
+           .to(frame, UpdateFrame(350), "eleventhFlag")
+           .to(".zshan", {opacity: 1, ease: "expo"}, "eleventhFlag")
+
+           .to(frame, UpdateFrame(380), "twelvethFlag")
+           .to(".zshan span", {opacity: 1, ease: "expo", width: 40}, "twelvethFlag")
+
+           .to(frame, UpdateFrame(410), "thirteenthFlag")
+           .to(".zshan span", {opacity: 1, ease: "expo", width: 40}, "thirteenthFlag")
+
+           .to(frame, UpdateFrame(440), "fourteenthFlag")
+           .to(".zshan", {opacity: 0, ease: "linear"}, "fourteenthFlag")
+
+           .to(frame, UpdateFrame(frame.MaxFrame), "endFlag")
+
+            window.addEventListener("resize", function(){
+                loadImages(frame.CurrentFrame)
             })
         }
 
-        preLoadImages();
-        
+        preLoadImages()
+
     </script>
+    
 </body>
 </html>
