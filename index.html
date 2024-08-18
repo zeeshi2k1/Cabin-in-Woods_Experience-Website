@@ -7,9 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <style>
+
+        #cursor{
+            height: 50px;
+            width: 50px;
+            background-color: #7d1d1d;
+            position: fixed;
+            border-radius: 50%;
+        }
+        .main, a, label{
+            cursor: none;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="w-full bg-zinc-900">
+    <div class="w-full main bg-zinc-900">
+        <div id="cursor"></div>
         <div class="parent relative w-full h-[1400vh]">
             <div class="w-full sticky top-0 left-0 overflow-x-hidden">
                 <canvas class="w-full h-screen" id="canvas"></canvas>
@@ -65,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full p-10 bg-black text-red-900">
+        <div class="w-full p-10 bg-black text-red-900 font-[500]">
 
             <h1 class="text-8xl tracking-tighter">&capcup; &nbsp; Connect with Us:</h1>
 
@@ -115,7 +130,7 @@
                     
                 </div>
         </div>
-    </div>
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -265,6 +280,19 @@
         }
 
         requestAnimationFrame(raf)
+    </script>
+
+    <script>
+        var parent = document.querySelector(".main")
+        var cursor = document.querySelector("#cursor")
+
+        parent.addEventListener("mousemove", function(dets){
+            gsap.to(cursor,{
+                x: dets.x,
+                y: dets.y,
+                ease: "back.out"
+            })
+        })
     </script>
 </body>
 </html>
