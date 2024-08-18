@@ -72,7 +72,3 @@ To run this project locally, follow these steps:
 - **Inspired Website**: [doze.studio](https://doze.studio/)
 - **Inspired By**: [Sheryians](https://www.youtube.com/watch?v=ouq6ks1zVAs)
 - **Thanks To**: [Tailwind CSS](https://tailwindcss.com/), [GSAP](https://gsap.com/), [DARKROOM.ENGINEERING](https://lenis.darkroom.engineering/), [Font Awesome](https://fontawesome.com/)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
