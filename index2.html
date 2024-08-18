@@ -64,51 +64,52 @@
                 </div>
             </div>
         </div>
-        <div class="w-full credits p-10 bg-black text-white text-6xl">
+        <div class="w-full p-10 bg-black text-red-900">
 
-            &capcup; &nbsp; Connect with Us:
+            <h1 class="text-8xl tracking-tighter">&capcup; &nbsp; Connect with Us:</h1>
 
-            <br><br>
-
-            <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl">
-                <label class="ml-10">z_shan3d.blend</label></a><br>
-
-            <a href="https://www.instagram.com/skippingdays.exe/" class="fa fa-instagram text-5xl">
-                <label class="ml-10">skippingdays.exe</label></a><br>
-
-            <a href="https://github.com/zeeshi2k1" class="fa fa-github text-5xl">
-                <label class="ml-10">zeeshi2k1</label></a><br>
-
-            <a href="https://www.behance.net/Zeeshii2k1" class="fa fa-behance text-5xl">
-                <label class="ml-6">Zeeshii2k1</label></a><br>
-
-            <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/" class="fa fa-linkedin text-5xl">
-                <label class="ml-9">Zeeshan Ahmed</label></a><br>
-
-            <a href="https://www.facebook.com/profile.php?id=100008536835195" class="fa fa-facebook text-5xl">
-                <label class="ml-12">Zeeshan Ahmed</label></a><br>
-
-            <a href="https://x.com/Zeeshi2k1" class="fa fa-twitter text-5xl">
-                <label class="ml-8">Zeeshi2k1</label></a>
-            
-            <br><br>
-
-            &reg; &nbsp;Credits:
-
-            <br><br>
-            <p class="text-3xl">
-            VFX & CGI: Zeeshan Ahmed<br>
-            Web Developer: Zeeshan Ahmed<br>
-            3D Artist: Zeeshan Ahmed<br>
-            Rendered Frames: Zeeshan Ahmed<br>
-            Inspired Website: doze.studio<br>
-            Inspired By: Sheryians
-            </p>
-
-            <br><br>
-
-            Thank You!
-            
+                <div class="credits p-10 text-6xl flex flex-col gap-4">
+        
+                    <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl">
+                        <label class="ml-10">z_shan3d.blend</label></a><br>
+        
+                    <a href="https://www.instagram.com/skippingdays.exe/" class="fa fa-instagram text-5xl">
+                        <label class="ml-10">skippingdays.exe</label></a><br>
+        
+                    <a href="https://github.com/zeeshi2k1" class="fa fa-github text-5xl">
+                        <label class="ml-10">zeeshi2k1</label></a><br>
+        
+                    <a href="https://www.behance.net/Zeeshii2k1" class="fa fa-behance text-5xl">
+                        <label class="ml-6">Zeeshii2k1</label></a><br>
+        
+                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/" class="fa fa-linkedin text-5xl">
+                        <label class="ml-9">Zeeshan Ahmed</label></a><br>
+        
+                    <a href="https://www.facebook.com/profile.php?id=100008536835195" class="fa fa-facebook text-5xl">
+                        <label class="ml-12">Zeeshan Ahmed</label></a><br>
+        
+                    <a href="https://x.com/Zeeshi2k1" class="fa fa-twitter text-5xl">
+                        <label class="ml-8">Zeeshi2k1</label></a>
+                    
+                    <br><br>
+        
+                    &reg; &nbsp;Credits:
+        
+                    <br><br>
+                    
+                    <a href="https://www.instagram.com/z_shan3d.blend/">VFX & CGI: Zeeshan Ahmed</a><br>
+                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/">Web Developer: Zeeshan Ahmed</a><br>
+                    <a href="https://www.behance.net/Zeeshii2k1">3D Artist: Zeeshan Ahmed</a><br>
+                    <a href="https://www.instagram.com/skippingdays.exe/">Rendered Frames: Zeeshan Ahmed</a><br>
+                    <a href="https://doze.studio/">Inspired Website: doze.studio</a><br>
+                    <a href="https://www.youtube.com/watch?v=ouq6ks1zVAs">Inspired By: Sheryians</a>
+                    </p>
+        
+                    <br><br>
+        
+                    Thank You!
+                    
+                </div>
         </div>
     </div>
 
@@ -230,27 +231,26 @@
 
            .to(frame, UpdateFrame(frame.MaxFrame), "endFlag")
 
-            window.addEventListener("resize", function(){
-                loadImages(frame.CurrentFrame)
-            })
+        }
 
-            querySelectorAll(".credits")
+        window.addEventListener("resize", function(){
+                loadImages(frame.CurrentFrame)
+        })
+
+        preLoadImages()
+
+        document.querySelectorAll(".credits a","credits p")
             .forEach(function(elem){
-                gasp.from(elem, {
+                gsap.from(elem, {
                     scrollTrigger: {
                         trigger: elem,
                         start: "top 90%",
                         end: "bottom 20%",
                         scrub: 2
                     },
-                    opacity: .3
+                    opacity: 0.3
                 })
             })
-        }
-
-        preLoadImages()
-
     </script>
-    
 </body>
 </html>
