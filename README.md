@@ -24,7 +24,7 @@ To run this project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/cabin-in-woods.git
+   git clone https://github.com/zeeshi2k1/Cabin-in-Woods_Experience-Website.git
    ```
 
 2. **Navigate to the Project Directory:**
