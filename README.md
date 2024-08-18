@@ -1,7 +1,3 @@
-Here's a sample GitHub README documentation for your HTML and JavaScript project:
-
----
-
 # Cabin in Woods
 
 **Cabin in Woods** is an immersive, visually stunning web project designed to evoke suspense and mystery. This project uses HTML, CSS, and JavaScript to create an engaging experience with dynamic animations and interactive elements.
