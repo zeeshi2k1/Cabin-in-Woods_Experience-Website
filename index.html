@@ -6,6 +6,7 @@
     <title>Cabin in Woods</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
 </head>
 <body>
     <div class="w-full bg-zinc-900">
@@ -62,45 +63,63 @@
                 -translate-x-1/2 -translate-y-1/2 tracking-tighter opacity-0">
                  @z <span class="line w-0 h-1 bg-white inline-block opacity-0"></span> shan3d.blend
                 </div>
-                <div class="w-full p-10 bg-black text-white text-6xl">
+            </div>
+        </div>
+        <div class="w-full p-10 bg-black text-red-900">
 
-                    &capcup; &nbsp; Connect with Us:
+            <h1 class="text-8xl tracking-tighter">&capcup; &nbsp; Connect with Us:</h1>
 
-                    <br><br>
-
-                    <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl"> <label class="ml-10">z_shan3d.blend</label></a><br>
-                    <a href="https://www.instagram.com/skippingdays.exe/" class="fa fa-instagram text-5xl"> <label class="ml-10">skippingdays.exe</label></a><br>
-                    <a href="https://github.com/zeeshi2k1" class="fa fa-github text-5xl">  <label class="ml-10">zeeshi2k1</label></a><br>
-                    <a href="https://www.behance.net/Zeeshii2k1" class="fa fa-behance text-5xl">  <label class="ml-6">Zeeshii2k1</label></a><br>
-                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/" class="fa fa-linkedin text-5xl"> <label class="ml-9">Zeeshan Ahmed</label></a><br>
-                    <a href="https://www.facebook.com/profile.php?id=100008536835195" class="fa fa-facebook text-5xl">  <label class="ml-12">Zeeshan Ahmed</label></a><br>
-                    <a href="#" class="fa fa-twitter text-5xl"> <label class="ml-8">Zeeshan Ahmed</label></a>
+                <div class="credits p-10 text-6xl flex flex-col gap-4">
+        
+                    <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl">
+                        <label class="ml-10">z_shan3d.blend</label></a><br>
+        
+                    <a href="https://www.instagram.com/skippingdays.exe/" class="fa fa-instagram text-5xl">
+                        <label class="ml-10">skippingdays.exe</label></a><br>
+        
+                    <a href="https://github.com/zeeshi2k1" class="fa fa-github text-5xl">
+                        <label class="ml-10">zeeshi2k1</label></a><br>
+        
+                    <a href="https://www.behance.net/Zeeshii2k1" class="fa fa-behance text-5xl">
+                        <label class="ml-6">Zeeshii2k1</label></a><br>
+        
+                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/" class="fa fa-linkedin text-5xl">
+                        <label class="ml-9">Zeeshan Ahmed</label></a><br>
+        
+                    <a href="https://www.facebook.com/profile.php?id=100008536835195" class="fa fa-facebook text-5xl">
+                        <label class="ml-12">Zeeshan Ahmed</label></a><br>
+        
+                    <a href="https://x.com/Zeeshi2k1" class="fa fa-twitter text-5xl">
+                        <label class="ml-8">Zeeshi2k1</label></a>
                     
                     <br><br>
-
-                    &copy; &nbsp;Credits:
-
+        
+                    &reg; &nbsp;Credits:
+        
                     <br><br>
-                    <p class="text-3xl">
-                    VFX & CGI: Zeeshan Ahmed<br>
-                    Web Developer: Zeeshan Ahmed<br>
-                    3D Artist: Zeeshan Ahmed<br>
-                    Rendered: Zeeshan Ahmed<br>
-                    Inspired Website: doze.studio<br>
-                    Inspired by: Sheryians
-                    </p>
-
+                    
+                    <a href="https://www.instagram.com/z_shan3d.blend/">VFX & CGI: Zeeshan Ahmed</a><br>
+                    <a href="https://www.linkedin.com/in/zeeshan-ahmed-321399223/">Web Developer: Zeeshan Ahmed</a><br>
+                    <a href="https://www.behance.net/Zeeshii2k1">3D Artist: Zeeshan Ahmed</a><br>
+                    <a href="https://www.instagram.com/skippingdays.exe/">Rendered Frames: Zeeshan Ahmed</a><br>
+                    <a href="https://doze.studio/">Inspired Website: doze.studio</a><br>
+                    <a href="https://www.youtube.com/watch?v=ouq6ks1zVAs">Inspired By: Sheryians</a><br>
+                    <a href="https://tailwindcss.com/">Thanks To Tailwindcss</a><br>
+                    <a href="https://gsap.com/">Thanks To GSAP</a><br>
+                    <a href="https://lenis.darkroom.engineering/">Thanks To DARKROOM.ENGINEERING For Lenis</a><br>
+                    <a href="https://fontawesome.com/">Thanks To Font Awesome</a><br>
+        
                     <br><br>
-
+        
                     Thank You!
                     
                 </div>
-            </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
 
     <script>
          const canvas = document.querySelector("canvas");
@@ -217,14 +236,35 @@
 
            .to(frame, UpdateFrame(frame.MaxFrame), "endFlag")
 
-            window.addEventListener("resize", function(){
-                loadImages(frame.CurrentFrame)
-            })
         }
+
+        window.addEventListener("resize", function(){
+                loadImages(frame.CurrentFrame)
+        })
 
         preLoadImages()
 
+        document.querySelectorAll(".credits a","credits p")
+            .forEach(function(elem){
+                gsap.from(elem, {
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        scrub: 2
+                    },
+                    opacity: 0.3
+                })
+            })
+
+        const lenis = new Lenis()
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
     </script>
-    
 </body>
 </html>
