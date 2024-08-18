@@ -28,6 +28,8 @@ To run this project locally, follow these steps:
    ```
 
 2. **Navigate to the Project Directory:**
+![rendered video000](https://github.com/user-att![0045](https://github.com/user-attachments/assets/8ca0ccd6-47a6-4749-b090-97d168691c2c)
+achments/assets/c2d988a8-ca44-4996-9e5e-c72ce63354c9)
 
    ```bash
    cd cabin-in-woods
