@@ -112,7 +112,7 @@
                     
                     <br><br>
         
-                    <h1>&reg; &nbsp;Credits:</h1>
+                    <h1 class="text-8xl tracking-tighter text-left">&reg; &nbsp;Credits:</h1>
         
                     <br><br>
                     
@@ -233,12 +233,15 @@
 
            .to(frame, UpdateFrame(260), "eighthFlag")
            .to(".panel", {x: "0%", ease: "expo"}, "eighthFlag")
+           .to(".main", {cursor:"auto", ease: "expo"}, "eighthFlag")
 
            .to(frame, UpdateFrame(290), "ninthFlag")
            .to(".panel", {x: "0%", ease: "expo"}, "ninthFlag")
+           .to(".main", {cursor:"auto", ease: "expo"}, "ninthFlag")
 
            .to(frame, UpdateFrame(320), "tenthFlag")
            .to(".panel", {opacity: 0, ease: "linear"}, "tenthFlag")
+           .to(".main", {cursor:"none", ease: "linear"}, "tenthFlag")
 
            .to(frame, UpdateFrame(350), "eleventhFlag")
            .to(".zshan", {opacity: 1, ease: "expo"}, "eleventhFlag")
