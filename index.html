@@ -15,6 +15,9 @@
             background-color: #7d1d1d;
             position: fixed;
             border-radius: 50%;
+            opacity: 0%;
+            top: -3%;
+            left: -1.5%
         }
         .main, a, label{
             cursor: none;
@@ -82,9 +85,9 @@
         </div>
         <div class="w-full p-10 bg-black text-red-900 font-[500]">
 
-            <h1 class="text-8xl tracking-tighter">&capcup; &nbsp; Connect with Us:</h1>
+            <h1 class="text-8xl tracking-tighter pb-10">&capcup; &nbsp; Connect with Us:</h1>
 
-                <div class="credits p-10 text-6xl flex flex-col gap-4">
+                <div class="credits p-10 text-6xl flex flex-col gap-4 text-center">
         
                     <a href="https://www.instagram.com/z_shan3d.blend/" class="fa fa-instagram text-5xl">
                         <label class="ml-10">z_shan3d.blend</label></a><br>
@@ -109,7 +112,7 @@
                     
                     <br><br>
         
-                    &reg; &nbsp;Credits:
+                    <h1>&reg; &nbsp;Credits:</h1>
         
                     <br><br>
                     
@@ -126,7 +129,7 @@
         
                     <br><br>
         
-                    Thank You!
+                    <h1>Thank You!</h1>
                     
                 </div>
         </div>
@@ -250,6 +253,7 @@
            .to(".zshan", {opacity: 0, ease: "linear"}, "fourteenthFlag")
 
            .to(frame, UpdateFrame(frame.MaxFrame), "endFlag")
+           .to("#cursor", {opacity: 1, ease: "expo"}, "endFlag")
 
         }
 
@@ -268,7 +272,18 @@
                         end: "bottom 20%",
                         scrub: 2
                     },
-                    opacity: 0.3
+                    opacity: 0
+                })
+
+                gsap.from(elem, {
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 20%",
+                        end: "bottom 20%",
+                        scrub: 2
+                    },
+                    opacity: 1,
+                    ease: "linear"
                 })
             })
 
@@ -285,12 +300,26 @@
     <script>
         var parent = document.querySelector(".main")
         var cursor = document.querySelector("#cursor")
+        var reveal = document.querySelector(".credits")
 
         parent.addEventListener("mousemove", function(dets){
             gsap.to(cursor,{
                 x: dets.x,
                 y: dets.y,
                 ease: "back.out"
+            })
+        })
+
+        reveal.addEventListener("mouseenter", function(){
+            gsap.to(cursor,{
+                scale: 2
+            })
+              
+        })
+
+        reveal.addEventListener("mouseleave", function(){
+            gsap.to(cursor,{
+                scale: 1,  
             })
         })
     </script>
