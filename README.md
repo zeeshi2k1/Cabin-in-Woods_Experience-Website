@@ -1,6 +1,6 @@
 # Cabin in Woods
 
-**Cabin in Woods** is an immersive, visually stunning web project designed to evoke suspense and mystery. This project uses HTML, CSS, and JavaScript to create an engaging experience with dynamic animations and interactive elements.
+**Cabin in Woods** is an immersive, visually stunning web project designed to evoke suspense and mystery. This project uses HTML, CSS, JavaScript and 3D Modeling to create an engaging experience with dynamic animations and interactive elements.
 
 ## Features
 
